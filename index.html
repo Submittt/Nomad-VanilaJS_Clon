@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The-First Clon Web</title>
+</head>
+
+<body>
+    <h2 id="clock">00:00:00</h2>
+    <form class="hidden" id="login-form">
+        <input class="login"
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+        size="40"
+        />
+        <!-- <input type="submit" value="Log In"/> 로그인 버튼 주석-->
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+    <form id="todo-Form">
+        <input class="todo-write" type="text" placeholder="Write your own ToDo List" required>
+    </form>
+    <ul id="todo-List"></ul>
+    
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div> 
+    <div>
+        <footer>
+            <div id="quote">
+                <p>
+                <span></span><br>
+                <span></span>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/greeting.js"></script>
+    <script src="js/clcok.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+</html>
