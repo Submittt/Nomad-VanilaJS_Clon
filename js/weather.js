@@ -8,10 +8,13 @@ function onGeoOk(position){
     fetch(url)
     .then((response) => response.json())
     .then((data) => {
-        const weather = document.querySelector("#weather span:first-child");
-        const city = document.querySelector("#weather span:last-child");
-        city.innerText = data.name;
-        weather.innerText = `${Math.round(data.main.temp)}°C / ${data.weather[0].main}`;
+        const city_tem = document.querySelector("#weatherBox span:first-child");
+        const weather = document.querySelector("#weatherBox span:nth-child(2)");
+        let weatherIcon = document.querySelector('.weather-icon');
+        const {icon} = data.weather[0];
+        city_tem.innerHTML = `${data.name}, <br> Min_tem : ${Math.round(data.main.temp_min)}°C <br> Max_tem : ${Math.round(data.main.temp_max)}°C`;
+        weather.innerHTML =`${data.weather[0].main}`;
+        weatherIcon.innerHTML = `<img src="icons/${icon}.png">`;
     });
 }
 function onGeoError(){

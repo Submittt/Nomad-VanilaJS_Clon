@@ -9,37 +9,53 @@
 </head>
 
 <body>
-    <h2 id="clock">00:00:00</h2>
-    <form class="hidden" id="login-form">
-        <input class="login"
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-        size="40"
-        />
-        <!-- <input type="submit" value="Log In"/> 로그인 버튼 주석-->
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-Form">
-        <input class="todo-write" type="text" placeholder="Write your own ToDo List" required>
-    </form>
-    <ul id="todo-List"></ul>
-    
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div> 
-    <div>
-        <footer>
-            <div id="quote">
-                <p>
+    <div id="flexContainer">
+        <div class="loginBox">
+            <form class="hidden" id="login-form">
+                <input class="login"
+                required
+                maxlength="15"
+                type="text"
+                placeholder="Write User Name & Enter"
+                size="40"
+                />
+                <!-- <input type="submit" value="Log In"/> 로그인 버튼 주석-->
+            </form>
+            <h1 id="greeting" class="hidden"></h1>
+        </div>
+        <div class="Container1">
+            <div id="clockBox">00:00:00</div>
+            <div id="weatherBox">
+                <span class="city-tem"></span>
+                <span class="weather"></span>
+                <span class="weather-icon"><img src="icons/unknown.png" alt="Icon Error"/></span>
+            </div>
+            <div id="quoteBox">
                 <span></span><br>
                 <span></span>
-                </p>
+            </div>         
+        </div>
+        
+        <!-- <div id="flexContainer2"> -->
+        <span id="pin">📌</span>
+        <div class="Container2">
+            <div class="postit">
+                <div class="postFirstLine">Recommended Movie</div>
+                <div>&nbsp;To All The Boys</div>
+                <div>&nbsp;&nbsp;&nbsp;I've Loved Before❤️‍🔥</div>
+                <div>&nbsp;P.S. I Still Love You</div>
             </div>
-        </footer>
+            <div class="todoBox">
+                <form id="todo-Form">
+                    <input class="todo-write" type="text" placeholder="Write Todos & Enter" required>
+                </form>
+                <ul id="todo-List">
+                </ul>
+            </div>
+        </div>
+    <!-- </div> -->
     </div>
+
     <script src="js/greeting.js"></script>
     <script src="js/clcok.js"></script>
     <script src="js/quotes.js"></script>
